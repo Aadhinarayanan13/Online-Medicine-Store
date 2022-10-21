@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserLoginPage</title>
+</head>
+<body>
+    <div>
+        <h2>User Login Page</h2>
+        <form action="/UserLogin/UserLoginPage" method="post">
+
+            @Html.Label("UserName")
+            <input type="text" name="txtUserName" />
+            <br />
+            <br />
+            @Html.Label("Password")
+
+            <input type="password" name="txtPassword" />
+
+            <br />
+            <br />
+            <button type="submit">Login</button>
+        </form>
+
+        @if (ViewBag.Error != null)
+        {
+            <div>@ViewBag.Error</div>
+        }
+      
+
+
+    </div>
+</body>
+</html>
